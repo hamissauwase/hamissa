@@ -1,0 +1,54 @@
+
+Infocus Studio Web and USSD Application
+
+
+Introduction
+This project aims to develop both a web application and a USSD application for Infocus Studio Ltd, a photography and videography company based in Kigali city. The applications will facilitate various tasks for clients, including registration, ordering photography and videography services, payment, receiving confirmation messages, accessing pictures, and managing account login/logout.
+
+Technologies Used
+Flask (Python Framework) for web application development
+MySQL for database management
+Twilio API for USSD application development
+Installation and Setup
+Web Application (Flask)
+Clone the repository:
+bash
+Copy code
+git clone <repository_url>
+Install dependencies:
+Copy code
+pip install -r requirements.txt
+Set up MySQL database:
+Create a MySQL database named infocus_studio
+Import the provided infocus_studio.sql file to set up the necessary tables
+Configure Flask:
+Rename config.example.py to config.py
+Update config.py with your database credentials
+Run the application:
+Copy code
+python app.py
+The web application will be accessible at http://localhost:5000
+USSD Application (Twilio)
+Set up a Twilio account and get your account SID and authentication token.
+Purchase a Twilio phone number that supports SMS and voice calls.
+Set up a webhook to handle incoming SMS messages and voice calls. This webhook will point to the URL where your Flask application is hosted.
+Update the Flask application to handle incoming USSD requests using Twilio's Python SDK.
+Deploy the Flask application to a server accessible via the internet.
+Configure your Twilio phone number to use the webhook URL for SMS and voice calls.
+Test the USSD application by sending SMS messages to your Twilio phone number.
+Usage
+Web Application
+Navigate to the web application URL.
+Register as a new client or log in if you already have an account.
+Browse available photography and videography services.
+Place orders for desired services.
+Make payments securely using integrated payment gateways.
+Receive confirmation messages for successful orders.
+Access your pictures easily through the provided interface.
+Log out from your account when done.
+USSD Application
+Dial the designated USSD code on your phone.
+Follow the prompts to register, log in, and select desired services.
+Complete orders and payments using the USSD menu.
+Receive confirmation messages for successful transactions.
+
